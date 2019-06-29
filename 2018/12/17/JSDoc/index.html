@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <title>JS的注释 | 暴走的猿猴</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="摘要：jsdoc的初步学习">
+<meta name="keywords" content="JS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS的注释">
+<meta property="og:url" content="https://charley-liu.github.io/2018/12/17/JSDoc/index.html">
+<meta property="og:site_name" content="暴走的猿猴">
+<meta property="og:description" content="摘要：jsdoc的初步学习">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-06-28T18:22:05.937Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JS的注释">
+<meta name="twitter:description" content="摘要：jsdoc的初步学习">
+  
+    <link rel="alternative" href="/atom.xml" title="暴走的猿猴" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.ico">
+  
+  
+      <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet">
+  <script>
+      var yiliaConfig = {
+          rootUrl: '/',
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
+</head></html>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/head.jpg" class="js-avatar">
+            
+        </a>
+
+        <hgroup>
+          <h1 class="header-author"><a href="/" title="Hi Mate">Charley Liu</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">压力是动力他妈</p>
+        
+        
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="https://charley-liu.github.io">博客首页</a></li>
+                        
+                            <li><a href="/works">作品展示</a></li>
+                        
+                            <li><a href="/about">关于作者</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=wLe1rKWp8-n39fL18Pn5gLGx7qOvrQ" title="mail">mail</a>
+                            
+                                <a class="fl github" target="_blank" href="https://github.com/Charley-liu" title="github">github</a>
+                            
+                                <a class="fl zhihu" target="_blank" href="https://www.zhihu.com/people/bob-86-15-72/activities" title="zhihu">zhihu</a>
+                            
+                                <a class="fl weibo" target="_blank" href="http://weibo.com/p/1005052706169463/home?from=page_100505&mod=TAB&is_hot=1#place" title="weibo">weibo</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                
+                
+
+                
+                
+                <section class="switch-part switch-part3">
+                
+                    <div id="js-aboutme">喜欢接触新鲜事物、迎接新的挑战，更爱游离于错综复杂的编码与逻辑中</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="Me">Charley Liu</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/head.jpg" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="Me">Charley Liu</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">压力是动力他妈</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="https://charley-liu.github.io">博客首页</a></li>
+                
+                    <li><a href="/works">作品展示</a></li>
+                
+                    <li><a href="/about">关于作者</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=wLe1rKWp8-n39fL18Pn5gLGx7qOvrQ" title="mail">mail</a>
+                    
+                        <a class="github" target="_blank" href="https://github.com/Charley-liu" title="github">github</a>
+                    
+                        <a class="zhihu" target="_blank" href="https://www.zhihu.com/people/bob-86-15-72/activities" title="zhihu">zhihu</a>
+                    
+                        <a class="weibo" target="_blank" href="http://weibo.com/p/1005052706169463/home?from=page_100505&mod=TAB&is_hot=1#place" title="weibo">weibo</a>
+                    
+                </div>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-JSDoc" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/12/17/JSDoc/" class="article-date">
+      <time datetime="2018-12-17T03:25:17.000Z" itemprop="datePublished">2018-12-17</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      JS的注释
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/日志/">日志</a><a class="article-category-link" href="/categories/日志/二级目录/">二级目录</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>摘要：jsdoc的初步学习<br><a id="more"></a><br>  &emsp;&emsp;一直在用JS，但是真正对JS的好多规范性的用法却缺少很多认识，像是今天说的JS的注释！！！<br>  js注释有可能要问了，js的注释不就是<code>/*....*/</code>或者是<code>//</code>这种嘛！这种说法其实也是对的，但是往往在一些完善的代码体系中，这种注释方式和我今天说的这种注释方式是并存的。<br>  &emsp;&emsp;今天就说一下另外一种代码注释方式，对于我这个初学者来说算是进阶的代码注释方式。<br>  &emsp;&emsp;向我们平时用到的库和框架这些，都会遇到代码看不懂，也不理解他代码的含义是做什么的是不是有返回值或者返回的类型是什么，就像下边的这种代码👇<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line">   * Close the server.</span><br><span class="line">   *</span><br><span class="line">   * @param &#123;Function&#125; cb Callback</span><br><span class="line">   * @public</span><br><span class="line">*/</span><br></pre></td></tr></table></figure></p>
+<p>   这种代码代表的是啥意思呢！写的这些是干什么用的呢，看着像注释，但是跟我们原来写的注释还有些不一样呢。<br>   &emsp;&emsp;咱们就来讲一下，这种注释，这种注释在生成代码以后会生成一份JSDoc的文档，也就是这个js文件的所有注释信息的一个汇总，不管谁在阅读这个js文件，都可以通过阅读这个JSDoc来获取这个js库或者插件的所有注释信息，这样可以让读者或者使用者能过快速定位方法或者类以及所需要的信息。<br>   &emsp;&emsp;ps：生成jsDoc是需要下载jsdoc模块进行配置生成，这个通过这个进行安装配置<a href="https://www.css88.com/doc/jsdoc/about-configuring-default-template.html" target="_blank" rel="noopener">JSDoc中文官网</a>,这里其实包含了所有的注释属性的解释和使用方法。</p>
+<p>   &emsp;&emsp;这下边是比较常用的，可以参照使用！</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">标签</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">@module</td>
+<td style="text-align:center">标明当前文件模块，在这个文件中的所有成员将被默认为属于此模块，除非另外标明</td>
+</tr>
+<tr>
+<td style="text-align:center">@submodule</td>
+<td style="text-align:center">针对模块的划分，处于@module之下</td>
+</tr>
+<tr>
+<td style="text-align:center">@class</td>
+<td style="text-align:center">标示一个类或者一个函数</td>
+</tr>
+<tr>
+<td style="text-align:center">@constructor</td>
+<td style="text-align:center">当使用对象字面量形式定义类时，可使用此标签标明其构造函数</td>
+</tr>
+<tr>
+<td style="text-align:center">@callback</td>
+<td style="text-align:center">标明此方法是一个回调函数</td>
+</tr>
+<tr>
+<td style="text-align:center">@event</td>
+<td style="text-align:center">标明一个可触发的事件函数，一个典型的事件是由对象定义的一组属性来表示。</td>
+</tr>
+<tr>
+<td style="text-align:center">@constant</td>
+<td style="text-align:center">常量标识</td>
+</tr>
+<tr>
+<td style="text-align:center">@member/@var</td>
+<td style="text-align:center">记录一个基本数据类型的成员变量</td>
+</tr>
+<tr>
+<td style="text-align:center">@method</td>
+<td style="text-align:center">标记一个方法或函数</td>
+</tr>
+<tr>
+<td style="text-align:center">@param</td>
+<td style="text-align:center">标记方法参数及参数类型</td>
+</tr>
+<tr>
+<td style="text-align:center">@property</td>
+<td style="text-align:center">标明一个对象的属性</td>
+</tr>
+<tr>
+<td style="text-align:center">@readonly</td>
+<td style="text-align:center">只读</td>
+</tr>
+<tr>
+<td style="text-align:center">@return</td>
+<td style="text-align:center">标明返回值、类型及描述</td>
+</tr>
+<tr>
+<td style="text-align:center">@type</td>
+<td style="text-align:center">描述代码变量的类型</td>
+</tr>
+<tr>
+<td style="text-align:center">@description</td>
+<td style="text-align:center">如果在注释开始描述可省略此标签</td>
+</tr>
+<tr>
+<td style="text-align:center">@enum</td>
+<td style="text-align:center">一个类中属性的类型相同时，使用此标签标明</td>
+</tr>
+<tr>
+<td style="text-align:center">@example</td>
+<td style="text-align:center">示例，代码可自动高亮</td>
+</tr>
+<tr>
+<td style="text-align:center">@exports</td>
+<td style="text-align:center">标识此对象将会被导出到外部调用</td>
+</tr>
+<tr>
+<td style="text-align:center">@ignore</td>
+<td style="text-align:center">忽略此注释块</td>
+</tr>
+<tr>
+<td style="text-align:center">@link</td>
+<td style="text-align:center">内联标签，创建一个链接，如 <code>{@link http://github.com Github}</code></td>
+</tr>
+<tr>
+<td style="text-align:center">@name</td>
+<td style="text-align:center">指定一段代码的名称，强制 JSDoc 使用此名称，而不是代码里的名称</td>
+</tr>
+<tr>
+<td style="text-align:center">@namespace</td>
+<td style="text-align:center">指定一个变量为命名空间变量</td>
+</tr>
+<tr>
+<td style="text-align:center">@static</td>
+<td style="text-align:center">描述一个不需实例即可使用的变量</td>
+</tr>
+<tr>
+<td style="text-align:center">@summary</td>
+<td style="text-align:center">对描述信息的短的概述</td>
+</tr>
+<tr>
+<td style="text-align:center">@throws</td>
+<td style="text-align:center">描述方法将会出现的错误和异常</td>
+</tr>
+<tr>
+<td style="text-align:center">@todo</td>
+<td style="text-align:center">描述函数的功能或任务</td>
+</tr>
+<tr>
+<td style="text-align:center">@tutorial</td>
+<td style="text-align:center">插入一个指向向导教程的链接</td>
+</tr>
+</tbody>
+</table>
+<p>&emsp;&emsp;以上都是本人在学习过程中的一些学习点，请各位大神指点，不喜勿喷！！</p>
+
+      
+      
+        <div class="page-reward">
+          <p><a href="javascript:void(0)" onclick="dashangToggle()" class="dashang" title="打赏，支持一下">赏</a></p>
+          <div class="hide_box"></div>
+          <div class="shang_box">
+            <a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()" title="关闭">×</a>
+            <div class="shang_tit">
+              <p>有钱的捧个钱场！没钱的捧个人场</p>
+            </div>
+            <div class="shang_payimg">
+              <img src="/img/alipayimg.jpg" alt="扫码支持" title="扫一扫" />
+            </div>
+              <div class="pay_explain">扫码打赏，你说多少就多少</div>
+            <div class="shang_payselect">
+              
+                <div class="pay_item checked" data-id="alipay">
+                  <span class="radiobox"></span>
+                  <span class="pay_logo"><img src="/img/alipay.png" alt="支付宝" /></span>
+                </div>
+              
+              
+                <div class="pay_item" data-id="wechat">
+                  <span class="radiobox"></span>
+                  <span class="pay_logo"><img src="/img/weixin.png" alt="微信" /></span>
+                </div>
+              
+            </div>
+            <div class="shang_info">
+              <p>打开<span id="shang_pay_txt">支付宝</span>扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+        <script type="text/javascript">
+          $(".pay_item").click(function(){
+            $(this).addClass('checked').siblings('.pay_item').removeClass('checked');
+            var dataid=$(this).attr('data-id');
+            $(".shang_payimg img").attr("src","/img/"+dataid+"img.jpg");
+            $("#shang_pay_txt").text(dataid=="alipay"?"支付宝":"微信");
+          });
+          function dashangToggle(){
+            $(".hide_box").fadeToggle();
+            $(".shang_box").fadeToggle();
+          }
+        </script>
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2018/12/17/JSDoc/">JS的注释</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 Charley Liu 的个人博客">Charley Liu</a></p>
+        <p><span>发布时间:</span>2018年12月17日 - 11时25分</p>
+        <p><span>最后更新:</span>2019年06月29日 - 02时22分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2018/12/17/JSDoc/" title="JS的注释">https://charley-liu.github.io/2018/12/17/JSDoc/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://charley-liu.github.io/2018/12/17/JSDoc/　　作者: Charley Liu" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+    <a href="/2019/06/14/Git/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          关于Git的使用
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/11/14/ESLint/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">关于ESLint的安装和使用</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    
+</div>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+    }
+</script>
+
+
+
+
+
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+
+
+    
+        <section class="youyan" id="comments">
+  <div id="uyan_frame"></div>
+  <script src="http://v2.uyan.cc/code/uyan.js?uid=2155465"></script>
+</section>
+
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2019/06/14/Git/" title="上一篇: 关于Git的使用">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a href="/2018/11/14/ESLint/" title="下一篇: 关于ESLint的安装和使用">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/06/14/Git/">关于Git的使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/17/JSDoc/">JS的注释</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/11/14/ESLint/">关于ESLint的安装和使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/17/npm/">npm的初解</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/12/nvm/">使用nvm-windows控制nodeJs版本</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/02/update/">利用vue-cli搭建vue项目（基础）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/19/VUE/">初解vue</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/20/ionic/">关于移动开发框架</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/01/hello/">初识HTML和css</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/01/GitHub/">关于Github搭建博客</a></li></ul>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+            }
+        })
+    </script>
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="visit">
+                暴走的猿猴 &hearts;&spades;&clubs;&diams; 2019 Charley Liu
+            </div>
+            <div class="footer-left">
+                
+            </div>
+        </div>
+        
+    </div>
+</footer>
+
+    </div>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 24;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+  </div>
+</body>
+</html>
