@@ -5,18 +5,18 @@
   
   <title>关于Git的使用 | 暴走的猿猴</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="努力！努力！努力！！">
+  <meta name="description" content="摘要：项目所应用到的代码管理工具 — Git">
 <meta name="keywords" content="Git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于Git的使用">
 <meta property="og:url" content="https://charley-liu.github.io/2019/06/14/Git/index.html">
 <meta property="og:site_name" content="暴走的猿猴">
-<meta property="og:description" content="努力！努力！努力！！">
+<meta property="og:description" content="摘要：项目所应用到的代码管理工具 — Git">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-29T07:31:49.750Z">
+<meta property="og:updated_time" content="2019-11-15T13:31:46.328Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于Git的使用">
-<meta name="twitter:description" content="努力！努力！努力！！">
+<meta name="twitter:description" content="摘要：项目所应用到的代码管理工具 — Git">
   
     <link rel="alternative" href="/atom.xml" title="暴走的猿猴" type="application/atom+xml">
   
@@ -206,7 +206,12 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        
+        <p>摘要：项目所应用到的代码管理工具 — Git<br><a id="more"></a><br> &emsp;   &ensp;在我们日常开发项目的时候，会用到各种项目代码管理工具，如git、svn等。各家公司所选的工具也各不相同，但是他们都有共同点就是对代码版本的控制、代码的update、各版本代码的对比以及多人员协作开发等相关工作的辅助作用。<br> &emsp;   &ensp;我本人之前在上家公司用过svn，但是说实话现在的不管大公司还是小公司，用svn还是极少数的，svn如果放在以前用的人还是很多的，因为当时没有什么太好的工具可以使用，还必须手动备份，毕竟当时的前端没有发展的那么快，一个公司也就一个前端而且做的工作大部分都是画页面和切图等工作，所以用到代码管理的需求不是很高，所以有没有都无所谓。但是现在前端的不断发展，大多数公司更关注用户体验，所以从业前端的开发人员就越来越多，项目协作也就慢慢多了起来，所以管理代码工具的使用也就更加频繁，所以要求也就越来越高了。<br> &emsp;   &ensp;呃！！！有点跑题，咱们接着说svn，我们之前公司所用的svn只是针对于前端工程师使用，后端工程师有自己的代码管理工具，svn的使用过程和git最大的区别是git是按照元素据方式存储，svn是按文件方式，所以git的传输速度会更快一些，还有一个不同点我一直不太明白就是模式的不同，一个是分布式一个是集中式，这个概念还是有点模糊，后来在百度了一圈回来，大致了解了所谓的分布式和集中式，首先git是分布式，svn是集中式，svn在无网络的状态下，就瘫痪了，不能上传也不能更新。但是git只是不能拉取和上传服务器的的代码，其他工作不受到影响，我的理解就是svn有一个中心库在服务器上，一旦断网，团队成员之间就断了联系了，不能在进行协作开发了。git其实就不会出现干不了活的情况，因为在一开始拉取代码的时候会在本地备份一个远程库到本地，上传和更新都是在本地进行，等到有网络的时候在进行代码同步。所以说现在git已经称王，svn已经落寞。<br> &emsp;   &ensp;那现在就说一下git的使用，首先说明一下安装git，打开<a href="https://www.git-scm.com/download/" target="_blank" rel="noopener">git官网下载</a>,各种版本都可以下载，下载完成就不多说了，一路next…<br> &emsp;   &ensp;接下来咱们说一下使用</p>
+<blockquote>
+<p>一、查看远程分支<br><code>git branch</code>   是查看当前远程库中有哪几个分支<br><code>git branch -r</code>    查看当前远程库的详细信息（和上边类似）<br>二、拉取远程分支到本地（两种方式）<br><code>git checkout -b 本地分支名 origin/远程分支名</code>     可以直接跳转到分支<br><code>git fetch origin 远程分支名:本地分支名</code>      只能在本地新建分支，但是不会自动切换到该本地分支，需要手动checkout<br>三、切换分支和查看当前所在分支<br><code>git checkout 要切换的分支名</code>    切换分支<br><code>git branch</code>    当前分支会有*，并且高亮显示的为当前分支<br>四、查看历史：history<br><code>history</code>   直接输入history回车就可以查看你历史操作<br>五、查看要提交的文件   git status<br><code>git status</code>   一般就会输出你已经commit的文件<br>六、提交文件＋注释<br><code>git add .</code>   全部提交<br><code>git commit -m &quot;当前提交的注释信息&quot;</code>  这步操作是将需要提交的文件暂存在本地虚拟库中<br>七、推送到远程分支<br><code>git push 远程库名称</code>      将本地虚拟库中的文件推送到远程库中<br>八、更新项目<br><code>git stash</code> 将本地修改临时保存起来,git status后看不见修改的文件<br><code>git pull</code>   拉取远程库更新到本地<br><code>git stash pop</code>  恢复临时保存的修改<br>九、合并操作<br><code>git merge 当前分支名称</code>  将当前分支合并到主分支<br>十、删除操作<br><code>git branch -D 分支名称</code>   删除分支名的分支</p>
+</blockquote>
+<p>在一般情况下，以上的指令就能够满足日常的使用和团队配合，其实在开发过程中用到最多的就是git pull和git push两个指令，更新和推送代码。在push之前一般要先pull在push以防版本落后或者代码冲突，或者像上边用git stash也可以，这样的话就不会引发代码冲突，但是在日常开发中还是应该避免两个人同时开发同一个文件。<br>&emsp;   &ensp;好了，git的基本使用就说到这！欢迎指导意见！！！</p>
+
       
       
         <div class="page-reward">
@@ -263,7 +268,7 @@
         <p><span>本文标题:</span><a href="/2019/06/14/Git/">关于Git的使用</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Charley Liu 的个人博客">Charley Liu</a></p>
         <p><span>发布时间:</span>2019年06月14日 - 09时19分</p>
-        <p><span>最后更新:</span>2019年06月29日 - 15时31分</p>
+        <p><span>最后更新:</span>2019年11月15日 - 21时31分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2019/06/14/Git/" title="关于Git的使用">https://charley-liu.github.io/2019/06/14/Git/</a>
             <span class="copy-path" data-clipboard-text="原文: https://charley-liu.github.io/2019/06/14/Git/　　作者: Charley Liu" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -278,6 +283,15 @@
 
 
 <nav id="article-nav">
+  
+    <a href="/2019/11/15/question/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          工作中遇到的问题记录（一）
+        
+      </div>
+    </a>
   
   
     <a href="/2018/12/17/JSDoc/" id="article-nav-older" class="article-nav-link-wrap">
@@ -349,7 +363,9 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2019/11/15/question/" title="上一篇: 工作中遇到的问题记录（一）">
+                <i class="fa fa-angle-left"></i>
+            </a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
@@ -358,7 +374,7 @@
             </a>
         
     </div>
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/06/14/Git/">关于Git的使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/17/JSDoc/">JS的注释</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/11/14/ESLint/">关于ESLint的安装和使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/17/npm/">npm的初解</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/12/nvm/">使用nvm-windows控制nodeJs版本</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/02/update/">利用vue-cli搭建vue项目（基础）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/19/VUE/">初解vue</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/20/ionic/">关于移动开发框架</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/01/hello/">初识HTML和css</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/01/GitHub/">关于Github搭建博客</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/11/15/question/">工作中遇到的问题记录（一）</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/06/14/Git/">关于Git的使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/17/JSDoc/">JS的注释</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/11/14/ESLint/">关于ESLint的安装和使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/17/npm/">npm的初解</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/12/nvm/">使用nvm-windows控制nodeJs版本</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/02/update/">利用vue-cli搭建vue项目（基础）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/19/VUE/">初解vue</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/20/ionic/">关于移动开发框架</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/01/hello/">初识HTML和css</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/01/GitHub/">关于Github搭建博客</a></li></ul>
     <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
     <script>
         $(".post-list").addClass("toc-article");
