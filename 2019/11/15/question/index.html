@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="暴走的猿猴">
 <meta property="og:description" content="摘要：每天在工作中都会遇到各种各样的问题">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-15T15:05:42.069Z">
+<meta property="og:updated_time" content="2020-07-24T14:32:46.502Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="工作中遇到的问题记录（一）">
 <meta name="twitter:description" content="摘要：每天在工作中都会遇到各种各样的问题">
@@ -206,7 +206,13 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>摘要：每天在工作中都会遇到各种各样的问题<br><a id="more"></a></p>
+        <p>摘要：每天在工作中都会遇到各种各样的问题<br><a id="more"></a><br>在我们每次上线vue项目时会出现你打印的console.log或者err等调试信息，我们都希望在生产环境下将调试信息删掉，而在开发环境还想有相应的调试信息，我们该怎么做呢?<br>现在有两种方式进行限制</p>
+<h3 id="第一种方式"><a href="#第一种方式" class="headerlink" title="第一种方式:"></a>第一种方式:</h3><blockquote>
+<p>通过webpack的配置中进行限制，在打包时，判断时生产环境还是开发环境，进行删除还是显示调试信息<br>在vue项目中的webpack.prod.conf.js文件中<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">new UglifyJsPlugin(&#123;</span><br><span class="line">        <span class="symbol">uglifyOptions:</span> &#123;</span><br><span class="line">          <span class="symbol">mangle:</span> &#123;</span><br><span class="line">            <span class="symbol">safari10:</span> <span class="literal">true</span></span><br><span class="line">          &#125;,</span><br><span class="line">                    <span class="symbol">compress:</span> &#123;</span><br><span class="line">        <span class="symbol">warnings:</span> <span class="literal">false</span>,</span><br><span class="line">        <span class="symbol">drop_debugger:</span> <span class="literal">true</span>,<span class="regexp">//console</span></span><br><span class="line">        <span class="symbol">drop_console:</span> <span class="literal">true</span>,</span><br><span class="line">        <span class="symbol">pure_funcs:</span> [<span class="string">'console.log'</span>]/<span class="regexp">/移除console</span></span><br><span class="line"><span class="regexp">      &#125;,</span></span><br><span class="line"><span class="regexp">        &#125;,</span></span><br><span class="line"><span class="regexp">        sourceMap: config.build.productionSourceMap,</span></span><br><span class="line"><span class="regexp">        cache: true,</span></span><br><span class="line"><span class="regexp">        parallel: true,</span></span><br><span class="line"><span class="regexp">	  &#125;)</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h3 id="第二种方式"><a href="#第二种方式" class="headerlink" title="第二种方式"></a>第二种方式</h3><blockquote>
+<p>在通用js中添加一下全局函数即可：<br>//判断配置文件是否开启日志调试 是否输出日志 True 输出 False 不输出<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var logDebug = <span class="literal">false</span>;</span><br><span class="line">console.log = (function (oriLogFunc) &#123;</span><br><span class="line">  <span class="keyword">return</span> function () &#123;</span><br><span class="line">    <span class="keyword">if</span> (logDebug) &#123;</span><br><span class="line">      oriLogFunc.apply(this, arguments);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)(console.log);</span><br></pre></td></tr></table></figure></p>
+</blockquote>
 
       
       
@@ -264,7 +270,7 @@
         <p><span>本文标题:</span><a href="/2019/11/15/question/">工作中遇到的问题记录（一）</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Charley Liu 的个人博客">Charley Liu</a></p>
         <p><span>发布时间:</span>2019年11月15日 - 23时21分</p>
-        <p><span>最后更新:</span>2019年11月15日 - 23时05分</p>
+        <p><span>最后更新:</span>2020年07月24日 - 22时32分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2019/11/15/question/" title="工作中遇到的问题记录（一）">https://charley-liu.github.io/2019/11/15/question/</a>
             <span class="copy-path" data-clipboard-text="原文: https://charley-liu.github.io/2019/11/15/question/　　作者: Charley Liu" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -293,7 +299,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#第一种方式"><span class="toc-number">1.</span> <span class="toc-text">第一种方式:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第二种方式"><span class="toc-number">2.</span> <span class="toc-text">第二种方式</span></a></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -389,7 +395,7 @@
     <div class="outer">
         <div id="footer-info">
             <div class="visit">
-                暴走的猿猴 &hearts;&spades;&clubs;&diams; 2019 Charley Liu
+                暴走的猿猴 &hearts;&spades;&clubs;&diams; 2020 Charley Liu
             </div>
             <div class="footer-left">
                 
