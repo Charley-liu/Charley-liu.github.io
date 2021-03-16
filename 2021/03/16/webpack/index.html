@@ -3,20 +3,22 @@
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   
-  <title>关于Github搭建博客 | 暴走的猿猴</title>
+  <title>初解webpack | 暴走的猿猴</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="摘要：关于该博客的安装，调试的体会！！！！">
-<meta name="keywords" content="github">
+  <meta name="description" content="摘要：初步了解webpack的基本原理和配置">
+<meta name="keywords" content="webpack的基础配置以及使用">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于Github搭建博客">
-<meta property="og:url" content="https://charley-liu.github.io/2017/03/01/GitHub/index.html">
+<meta property="og:title" content="初解webpack">
+<meta property="og:url" content="https://charley-liu.github.io/2021/03/16/webpack/index.html">
 <meta property="og:site_name" content="暴走的猿猴">
-<meta property="og:description" content="摘要：关于该博客的安装，调试的体会！！！！">
+<meta property="og:description" content="摘要：初步了解webpack的基本原理和配置">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-28T18:22:05.935Z">
+<meta property="og:image" content="https://charley-liu.github.io/resource/webpack.png">
+<meta property="og:updated_time" content="2021-03-16T15:09:39.038Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于Github搭建博客">
-<meta name="twitter:description" content="摘要：关于该博客的安装，调试的体会！！！！">
+<meta name="twitter:title" content="初解webpack">
+<meta name="twitter:description" content="摘要：初步了解webpack的基本原理和配置">
+<meta name="twitter:image" content="https://charley-liu.github.io/resource/webpack.png">
   
     <link rel="alternative" href="/atom.xml" title="暴走的猿猴" type="application/atom+xml">
   
@@ -164,11 +166,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-GitHub" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-webpack" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/03/01/GitHub/" class="article-date">
-      <time datetime="2017-03-01T05:39:32.000Z" itemprop="datePublished">2017-03-01</time>
+      <a href="/2021/03/16/webpack/" class="article-date">
+      <time datetime="2021-03-16T14:10:11.000Z" itemprop="datePublished">2021-03-16</time>
 </a>
     </div>
   
@@ -181,7 +183,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      关于Github搭建博客
+      初解webpack
     </h1>
   
 
@@ -196,7 +198,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/">github</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webpack的基础配置以及使用/">webpack的基础配置以及使用</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -206,7 +208,63 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>摘要：关于该博客的安装，调试的体会！！！！<br><a id="more"></a><br>其实我刚开始想做的时候就有点纠结！因为会配置很多的文件啊！还要安装很多的插件和程序，想想都头疼！！<br>对于github我是一个新手！没玩几天，到现在还没有真正明白github的大部分功能！你就凑合看吧！哈哈哈哈！！！<br>这个博客其实重点就在于hexo的应用上，还有配置路径上，搞懂这些其实就容易的多。<br>网上攻略很多，我推荐你一个，我使用的<a href="http://blog.csdn.net/jzooo/article/details/46781805" target="_blank" rel="noopener">搭建github步骤</a>，真心不错！每一步都讲的很细，你可以好好看看，对你会有帮助的！相信我！！！<br>对了，还有一样东西也一道给你们，就是markdown的书写格式，就是你们看到的.md文件的编写规范，很受用哦！<br><a href="https://www.jianshu.com/p/191d1e21f7ed" target="_blank" rel="noopener">markdown简明语法</a>!!!<br>还有一件事情，就是我更新这次的原因，如果你这次写完博客以后，下次再想继续编写，更新博客，记得要在blog的文件上右击，否则无法连接github，也更新不了。或者有可能会把你以前写的所有东西都被覆盖。所以要谨慎！！<br>2017年8月2号更新<br>对于要想在另外一台电脑上继续编写你的博客，我用的是最笨的一种方法，就是把你的blog文件夹，在你搭建的电脑上拷贝下来，然后放在你想要写东西的电脑上，在这个电脑上装上hexo以后，直接hexo init以后，在输入hexo s -g这个指令本地只要能打开，你就可以在这台电脑上继续编写你的博客了，这种只适合更新博客比较慢的同学，因为考一次文件挺麻烦的。。。。记得下次在回到原来电脑上写，还要在拷回去。。。。。<br>方法有点二，如果有别的方式记得告诉我。。。。。谢过</p>
+        <p>摘要：初步了解webpack的基本原理和配置<br><a id="more"></a><br>正文：<br>　　webpack是继gulp之后的一个真正意义上的项目构建工具</p>
+<p>一、构建工具发展史</p>
+<blockquote>
+<ol>
+<li>Npm Script  (npm中内置的管理工具，因功能单一，需要结合其他构建工具共同使用，后续的webpack中需要结合它，作为多任务管理使用)</li>
+<li>Grunt（Npm Script进阶版，但是需要大量配置才能使用，过于繁琐）</li>
+<li>Gulp （真正意义上的构建工具，引入流概念）（task-&gt;run-&gt;watch-&gt;src-&gt;dest）</li>
+<li>Fis3（百度，国产构建工具，官方不在更新，不支持最新版node）</li>
+<li>Webpack</li>
+<li>Rollup（类似webpack的后现代产物，生态链不够完善，需要踩坑）</li>
+<li>……</li>
+</ol>
+</blockquote>
+<p>二、选用webpack的原因</p>
+<blockquote>
+<ol>
+<li>社区论坛丰富，共用插件库更新活跃</li>
+<li>有良好的生态链和维护团队，能提供良好的开发体验并保证质量</li>
+<li>目前webpack有大量开发者使用和验证，更好的优化了使用过程中有可能出现的问题并及时解决</li>
+<li>根据不同时期的构建工具对比，webpack融合了多数构建工具的优点并不断完善，能更好的给项目提供一站式的解决方案</li>
+</ol>
+</blockquote>
+<p>三、Webpack核心配置项</p>
+<blockquote>
+<p>Entry   （主入口文件）<br>Output （配置如何输出最终想要的代码）<br>Module （配置处理模块的相关规则）<br>Plugins (所需构建插件配置相关，在构建过程中注入钩子，从而实现相关个性化需求)<br>DevServer (本地服务，用于接收webpack通知并重新构建)<br>Resolve （命中规则配置）<br>……</p>
+</blockquote>
+<p>四、webpack之Entry属性<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/<span class="regexp">/多个入口</span></span><br><span class="line"><span class="regexp">entry: &#123;</span></span><br><span class="line"><span class="regexp"> a: './app</span><span class="regexp">/entry',</span></span><br><span class="line"><span class="regexp"> b: ['./app</span><span class="regexp">/entry1','./app</span><span class="regexp">/entry2']</span></span><br><span class="line"><span class="regexp">&#125; </span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/一个入口</span></span><br><span class="line"><span class="regexp">entry: [ './app</span><span class="regexp">/entry1', './app</span><span class="regexp">/entry2']</span></span><br></pre></td></tr></table></figure></p>
+<p>五、webpack之Output属性</p>
+<blockquote>
+<ol>
+<li>filename (输出文件名称，分动态和静态两种，静态是写死的字符串，动态可根据动态生成的chunk中name属性作为文件名称，通常以[name]方式指定)</li>
+<li>path （输出文件存放在本地的目录，通过调用nodejs的path方法）<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">output:</span>&#123;</span><br><span class="line">    <span class="symbol">path:</span> path.resolve(_dirname,<span class="string">'dist'</span>), <span class="regexp">//</span>输出文件存放的目录</span><br><span class="line">    <span class="symbol">filename:</span> <span class="string">'[name].[chunkhash].js'</span> /<span class="regexp">/输出文件名称</span></span><br><span class="line"><span class="regexp">    publicPath: '/assets</span><span class="regexp">/'/</span><span class="regexp">/放到指定目录下</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</blockquote>
+<p>六、webpack之Module属性</p>
+<blockquote>
+<p>rules(主要用于配置loader)<br>rules是数组形式，每一项配置都有条件匹配(正则,支持数组形式)，应用规则(数组形式，从后向前应用每个loader)<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">Module:</span>&#123;</span><br><span class="line">    <span class="symbol">rules:</span>[</span><br><span class="line">        <span class="symbol">test:</span> /\.css/, <span class="regexp">//</span>识别以css为结尾的文件</span><br><span class="line">        <span class="symbol">use:</span> ExtractTextPlugin.extract(&#123;</span><br><span class="line">            <span class="symbol">use:</span> [<span class="string">'css-loader?minimize'</span>]</span><br><span class="line">        &#125;)</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>七、webpack之Plugins属性</p>
+<blockquote>
+<p>Plugin用于拓展webpack的功能，通过在构建流程里注入钩子实现，它为webpack带来很大的灵活性<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">例如：<span class="symbol">plugins:</span>[</span><br><span class="line">    new  ExtractTextPlugin(&#123;</span><br><span class="line">        <span class="symbol">filename:</span> <span class="string">`[name]_[contenthash:8].css`</span></span><br><span class="line">    &#125;)</span><br><span class="line">]</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>需要运行以上代码，需要安装extract-text-webpack-plugin插件，如果你在output属性中path的第二个参数为/dist，那么在dist文件夹下就会生成一个main_xxxxxx.css的文件<br>该插件的作用就是提取出js代码里的css到单独的文件，并且通过filename的模板生成文件名</p>
+</blockquote>
+<p>八、webpack之devServer模块</p>
+<blockquote>
+<p>devServr主要用于在开发环境下的热更新操作<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">devServer:</span> &#123; </span><br><span class="line">    /<span class="regexp">/模块热替换</span></span><br><span class="line"><span class="regexp">    hot:true,</span></span><br><span class="line"><span class="regexp">    /</span><span class="regexp">/ 项目构建路径</span></span><br><span class="line"><span class="regexp">        contentBase: resolve(__dirname, 'bundle'),</span></span><br><span class="line"><span class="regexp">        /</span><span class="regexp">/ 启动gzip压缩 </span></span><br><span class="line"><span class="regexp">    compress: true, </span></span><br><span class="line"><span class="regexp">    /</span><span class="regexp">/ 启用端口号 </span></span><br><span class="line"><span class="regexp">    port: 3000, </span></span><br><span class="line"><span class="regexp">    /</span><span class="regexp">/ 自动打开浏览器 </span></span><br><span class="line"><span class="regexp">    open: true </span></span><br><span class="line"><span class="regexp">&#125;</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>九、webpack之Resolve模块</p>
+<blockquote>
+<p>主要是对文件的命中规则进行配置<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">Resolve:</span>&#123;</span><br><span class="line">    <span class="symbol">alias:</span> &#123;</span><br><span class="line">        <span class="string">'button$'</span>: <span class="string">'./src/compontents/'</span>，/<span class="regexp">/只命中以button结尾的</span></span><br><span class="line"><span class="regexp">    &#125;,</span></span><br><span class="line"><span class="regexp">    modules:['./src</span><span class="regexp">/components'，'node_modules'], /</span><span class="regexp">/寻找第三方引入模块，默认去node_modules目录下找，有些是自定义的模块所有如果都在components文件夹下，就可以这样写</span></span><br><span class="line"><span class="regexp">    extensions:['.js'，'.json']，/</span><span class="regexp">/后缀补全</span></span><br><span class="line"><span class="regexp">    mainFields: ['jsnext:main', 'browser', 'main'] /</span><span class="regexp">/有的模块会导出两份代码，通过设置确定优先选择哪个代码</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>十、webpack的执行过程</p>
+<p><img src="../../../../resource/webpack.png" alt="webpack"></p>
+<p>以上内容只是大概介绍了一下webpack的基本配置和使用，最后的原理很重要，webpack的构建过程就是在不断监听文件变化并重新编译，我在这家公司一个月会分享一次相关技术，拓展自己的知识面，共勉！</p>
 
       
       
@@ -261,13 +319,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/03/01/GitHub/">关于Github搭建博客</a></p>
+        <p><span>本文标题:</span><a href="/2021/03/16/webpack/">初解webpack</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Charley Liu 的个人博客">Charley Liu</a></p>
-        <p><span>发布时间:</span>2017年03月01日 - 13时39分</p>
-        <p><span>最后更新:</span>2019年06月29日 - 02时22分</p>
+        <p><span>发布时间:</span>2021年03月16日 - 22时10分</p>
+        <p><span>最后更新:</span>2021年03月16日 - 23时09分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/03/01/GitHub/" title="关于Github搭建博客">https://charley-liu.github.io/2017/03/01/GitHub/</a>
-            <span class="copy-path" data-clipboard-text="原文: https://charley-liu.github.io/2017/03/01/GitHub/　　作者: Charley Liu" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2021/03/16/webpack/" title="初解webpack">https://charley-liu.github.io/2021/03/16/webpack/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://charley-liu.github.io/2021/03/16/webpack/　　作者: Charley Liu" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -280,15 +338,11 @@
 
 <nav id="article-nav">
   
-    <a href="/2017/04/01/hello/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          初识HTML和css
-        
-      </div>
-    </a>
   
+    <a href="/2019/11/15/question/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">工作中遇到的问题记录（一）</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
   
 </nav>
 
@@ -354,13 +408,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/04/01/hello/" title="上一篇: 初识HTML和css">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2019/11/15/question/" title="下一篇: 工作中遇到的问题记录（一）">
+                <i class="fa fa-angle-right"></i>
+            </a>
         
     </div>
     <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2021/03/16/webpack/">初解webpack</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/11/15/question/">工作中遇到的问题记录（一）</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/06/14/Git/">关于Git的使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/17/JSDoc/">JS的注释</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/11/14/ESLint/">关于ESLint的安装和使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/17/npm/">npm的初解</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/12/nvm/">使用nvm-windows控制nodeJs版本</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/02/update/">利用vue-cli搭建vue项目（基础）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/19/VUE/">初解vue</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/20/ionic/">关于移动开发框架</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/01/hello/">初识HTML和css</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/01/GitHub/">关于Github搭建博客</a></li></ul>
