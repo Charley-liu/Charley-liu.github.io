@@ -3,20 +3,20 @@
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   
-  <title>关于移动开发框架 | 暴走的猿猴</title>
+  <title>ES6介绍和使用 | 暴走的猿猴</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="摘要：关于Ionic、Famo.us、Framework7和OnsenUI之间的对比和优缺点">
-<meta name="keywords" content="mobile">
+  <meta name="description" content="摘要：ES6、ES7简介和调试方法">
+<meta name="keywords" content="js">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于移动开发框架">
-<meta property="og:url" content="https://charley-liu.github.io/2017/04/20/ionic/index.html">
+<meta property="og:title" content="ES6介绍和使用">
+<meta property="og:url" content="https://charley-liu.github.io/2021/03/17/ES6/index.html">
 <meta property="og:site_name" content="暴走的猿猴">
-<meta property="og:description" content="摘要：关于Ionic、Famo.us、Framework7和OnsenUI之间的对比和优缺点">
+<meta property="og:description" content="摘要：ES6、ES7简介和调试方法">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-28T18:22:05.937Z">
+<meta property="og:updated_time" content="2021-03-17T15:27:54.515Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于移动开发框架">
-<meta name="twitter:description" content="摘要：关于Ionic、Famo.us、Framework7和OnsenUI之间的对比和优缺点">
+<meta name="twitter:title" content="ES6介绍和使用">
+<meta name="twitter:description" content="摘要：ES6、ES7简介和调试方法">
   
     <link rel="alternative" href="/atom.xml" title="暴走的猿猴" type="application/atom+xml">
   
@@ -164,11 +164,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-ionic" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-ES6" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/04/20/ionic/" class="article-date">
-      <time datetime="2017-04-20T05:50:20.000Z" itemprop="datePublished">2017-04-20</time>
+      <a href="/2021/03/17/ES6/" class="article-date">
+      <time datetime="2021-03-17T14:39:32.000Z" itemprop="datePublished">2021-03-17</time>
 </a>
     </div>
   
@@ -181,7 +181,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      关于移动开发框架
+      ES6介绍和使用
     </h1>
   
 
@@ -196,7 +196,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mobile/">mobile</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -206,7 +206,34 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>摘要：关于Ionic、Famo.us、Framework7和OnsenUI之间的对比和优缺点<br><a id="more"></a><br>    其实我对移动开发还是欠缺的太多，今天看了一篇文章大概说的就是在移动开发领域，webApp和原生开发之间的不同点，总的来说感觉，ionic还是很强大的，因为之前自己做过基于angularjs和ionic的项目，在兼容上ionic做的已经相当不错了，ios以及android都可以适用，但是今天说的就是另外几种移动端开发框架，Framework7简称“F7”，这款框架的优点就是已经接近完美的融合ios系统了，但是缺点就明显了，它对于跨平台是不支持的，也就是说只能在ios环境下才能发挥作用。其余两款框架，没有认真了解过，各位自己研究一下，对于以后的开发绝对有帮助！！！<br>附上链接：<a href="http://www.csdn.net/article/2014-12-22/2823241-hybrid-app-ui-frameworks/1" title="性能、UX、跨平台：移动Web应用UI框架大比拼" target="_blank" rel="noopener">http://www.csdn.net/article/2014-12-22/2823241-hybrid-app-ui-frameworks/1</a> </p>
+        <p>摘要：ES6、ES7简介和调试方法<br><a id="more"></a></p>
+<blockquote>
+<p>简介：</p>
+<blockquote>
+<p>ES 就是 ECMAScript的简称，ECMAScript是一种由Ecma国际（前身为欧洲计算机制造商协会,英文名称是European Computer Manufacturers Association）通过ECMA-262标准化的脚本程序设计语言。<br>ES6 也叫 ES2015 全称是ECMAScript2015</p>
+</blockquote>
+</blockquote>
+<p>1、<code>const</code> 和 <code>let</code></p>
+<blockquote>
+<p>1.1 <code>const</code> 用来定义常量。所谓的常量就是一次性定义终身不变的量。<br>常量的名字一般大写字母开头，暗示这是一个常量。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> HELLO = <span class="string">"你好"</span>;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>1.2 <code>let</code> 用来定义{}级作用域下的变量。注意{}级我们叫做块级作用域。<br>用<code>let</code>来定义的循环变量，它的神奇之处，自带闭包。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span> ; i++)&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(i);</span><br><span class="line">&#125;;</span><br><span class="line"><span class="built_in">console</span>.log(i); <span class="comment">//报错</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>2、数组和对象能解构</p>
+<blockquote>
+<p>当等号右侧是数组的时候，等号左侧可以将变量装入[]中接收，一一对应。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> [a,b,c] = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line"><span class="built_in">console</span>.log(a); <span class="comment">// 1</span></span><br><span class="line"><span class="built_in">console</span>.log(b); <span class="comment">// 2</span></span><br><span class="line"><span class="built_in">console</span>.log(c); <span class="comment">// 3</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>对象可以解构。当等号右侧是对象的时候，等号左侧可以将变量装入{}接收，一一对应。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> &#123; id, name, sex &#125; = &#123; <span class="attr">id</span>:<span class="number">1</span>, <span class="attr">name</span>:<span class="string">"张三"</span>, <span class="attr">sex</span>:<span class="string">"男"</span> &#125;;</span><br><span class="line"><span class="built_in">console</span>.log(id); <span class="comment">// 1</span></span><br><span class="line"><span class="built_in">console</span>.log(name); <span class="comment">// 张三</span></span><br><span class="line"><span class="built_in">console</span>.log(sex); <span class="comment">//男</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>如果解构不成功，变量的值就等于<code>undefined</code>。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> [x,y,...z] = [<span class="string">"a"</span>];</span><br><span class="line"><span class="built_in">console</span>.log(x); <span class="comment">// "a"</span></span><br><span class="line"><span class="built_in">console</span>.log(y); <span class="comment">// undefined</span></span><br><span class="line"><span class="built_in">console</span>.log(z); <span class="comment">// []</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>3、拓展运算符<code>...</code></p>
+<blockquote>
+<p>我们可以用 <code>...</code> 拓展运算符强制展开一个对象，通常用于另一个对象的赋值，数组同样也可以强制打开<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = &#123;</span><br><span class="line">	a:<span class="number">1</span>,</span><br><span class="line">	b:<span class="number">2</span>,</span><br><span class="line">	c:<span class="number">3</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> obj1 = &#123;</span><br><span class="line">	...obj,</span><br><span class="line">	b:<span class="number">8</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(obj1); <span class="comment">//&#123; a:1,b:8,c:3 &#125;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> arr1 = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line"><span class="keyword">let</span> arr2 = [<span class="number">4</span>,<span class="number">5</span>];</span><br><span class="line"><span class="keyword">let</span> arr3 = [...arr1,...arr2];</span><br><span class="line"><span class="built_in">console</span>.log(arr3); <span class="comment">// [1,2,3,4,5]</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
 
       
       
@@ -261,13 +288,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/04/20/ionic/">关于移动开发框架</a></p>
+        <p><span>本文标题:</span><a href="/2021/03/17/ES6/">ES6介绍和使用</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Charley Liu 的个人博客">Charley Liu</a></p>
-        <p><span>发布时间:</span>2017年04月20日 - 13时50分</p>
-        <p><span>最后更新:</span>2019年06月29日 - 02时22分</p>
+        <p><span>发布时间:</span>2021年03月17日 - 22时39分</p>
+        <p><span>最后更新:</span>2021年03月17日 - 23时27分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/04/20/ionic/" title="关于移动开发框架">https://charley-liu.github.io/2017/04/20/ionic/</a>
-            <span class="copy-path" data-clipboard-text="原文: https://charley-liu.github.io/2017/04/20/ionic/　　作者: Charley Liu" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2021/03/17/ES6/" title="ES6介绍和使用">https://charley-liu.github.io/2021/03/17/ES6/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://charley-liu.github.io/2021/03/17/ES6/　　作者: Charley Liu" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -280,18 +307,9 @@
 
 <nav id="article-nav">
   
-    <a href="/2017/06/19/VUE/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          初解vue
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/04/01/hello/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">初识HTML和css</div>
+    <a href="/2021/03/16/webpack/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">初解webpack</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -359,13 +377,11 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/06/19/VUE/" title="上一篇: 初解vue">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2017/04/01/hello/" title="下一篇: 初识HTML和css">
+            <a href="/2021/03/16/webpack/" title="下一篇: 初解webpack">
                 <i class="fa fa-angle-right"></i>
             </a>
         

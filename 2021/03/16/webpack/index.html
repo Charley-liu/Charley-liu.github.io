@@ -13,12 +13,12 @@
 <meta property="og:site_name" content="暴走的猿猴">
 <meta property="og:description" content="摘要：初步了解webpack的基本原理和配置">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://charley-liu.github.io/resource/webpack.png">
-<meta property="og:updated_time" content="2021-03-16T15:09:39.038Z">
+<meta property="og:image" content="https://charley-liu.github.io/resource/about/webpack.png">
+<meta property="og:updated_time" content="2021-03-17T15:28:30.920Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="初解webpack">
 <meta name="twitter:description" content="摘要：初步了解webpack的基本原理和配置">
-<meta name="twitter:image" content="https://charley-liu.github.io/resource/webpack.png">
+<meta name="twitter:image" content="https://charley-liu.github.io/resource/about/webpack.png">
   
     <link rel="alternative" href="/atom.xml" title="暴走的猿猴" type="application/atom+xml">
   
@@ -263,7 +263,7 @@
 <p>主要是对文件的命中规则进行配置<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">Resolve:</span>&#123;</span><br><span class="line">    <span class="symbol">alias:</span> &#123;</span><br><span class="line">        <span class="string">'button$'</span>: <span class="string">'./src/compontents/'</span>，/<span class="regexp">/只命中以button结尾的</span></span><br><span class="line"><span class="regexp">    &#125;,</span></span><br><span class="line"><span class="regexp">    modules:['./src</span><span class="regexp">/components'，'node_modules'], /</span><span class="regexp">/寻找第三方引入模块，默认去node_modules目录下找，有些是自定义的模块所有如果都在components文件夹下，就可以这样写</span></span><br><span class="line"><span class="regexp">    extensions:['.js'，'.json']，/</span><span class="regexp">/后缀补全</span></span><br><span class="line"><span class="regexp">    mainFields: ['jsnext:main', 'browser', 'main'] /</span><span class="regexp">/有的模块会导出两份代码，通过设置确定优先选择哪个代码</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br></pre></td></tr></table></figure></p>
 </blockquote>
 <p>十、webpack的执行过程</p>
-<p><img src="../../../../resource/webpack.png" alt="webpack"></p>
+<p><img src="../../../../resource/about/webpack.png" alt="webpack"></p>
 <p>以上内容只是大概介绍了一下webpack的基本配置和使用，最后的原理很重要，webpack的构建过程就是在不断监听文件变化并重新编译，我在这家公司一个月会分享一次相关技术，拓展自己的知识面，共勉！</p>
 
       
@@ -322,7 +322,7 @@
         <p><span>本文标题:</span><a href="/2021/03/16/webpack/">初解webpack</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Charley Liu 的个人博客">Charley Liu</a></p>
         <p><span>发布时间:</span>2021年03月16日 - 22时10分</p>
-        <p><span>最后更新:</span>2021年03月16日 - 23时09分</p>
+        <p><span>最后更新:</span>2021年03月17日 - 23时28分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2021/03/16/webpack/" title="初解webpack">https://charley-liu.github.io/2021/03/16/webpack/</a>
             <span class="copy-path" data-clipboard-text="原文: https://charley-liu.github.io/2021/03/16/webpack/　　作者: Charley Liu" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -337,6 +337,15 @@
 
 
 <nav id="article-nav">
+  
+    <a href="/2021/03/17/ES6/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          ES6介绍和使用
+        
+      </div>
+    </a>
   
   
     <a href="/2019/11/15/question/" id="article-nav-older" class="article-nav-link-wrap">
@@ -408,7 +417,9 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2021/03/17/ES6/" title="上一篇: ES6介绍和使用">
+                <i class="fa fa-angle-left"></i>
+            </a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
@@ -417,7 +428,7 @@
             </a>
         
     </div>
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2021/03/16/webpack/">初解webpack</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/11/15/question/">工作中遇到的问题记录（一）</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/06/14/Git/">关于Git的使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/17/JSDoc/">JS的注释</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/11/14/ESLint/">关于ESLint的安装和使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/17/npm/">npm的初解</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/12/nvm/">使用nvm-windows控制nodeJs版本</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/02/update/">利用vue-cli搭建vue项目（基础）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/19/VUE/">初解vue</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/20/ionic/">关于移动开发框架</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/01/hello/">初识HTML和css</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/01/GitHub/">关于Github搭建博客</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2021/03/17/ES6/">ES6介绍和使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/03/16/webpack/">初解webpack</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/11/15/question/">工作中遇到的问题记录（一）</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/06/14/Git/">关于Git的使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/17/JSDoc/">JS的注释</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/11/14/ESLint/">关于ESLint的安装和使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/17/npm/">npm的初解</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/12/nvm/">使用nvm-windows控制nodeJs版本</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/02/update/">利用vue-cli搭建vue项目（基础）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/19/VUE/">初解vue</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/20/ionic/">关于移动开发框架</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/01/hello/">初识HTML和css</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/01/GitHub/">关于Github搭建博客</a></li></ul>
     <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
     <script>
         $(".post-list").addClass("toc-article");
